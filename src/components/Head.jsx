@@ -1,12 +1,20 @@
 import React from "react";
 import { FaMicrophone, FaBell, FaPlus } from "react-icons/fa"; // FontAwesome Icons
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../store/togglesSlice";
 
 export default function Head() {
+  const disppatch = useDispatch();
+
+  const toggleMenuFun = () => {
+    disppatch(toggleMenu());
+  };
   return (
-    <div className="grid grid-flow-col p-4 shadow-md items-center">
+    <div className="grid grid-flow-col p-4  items-center">
       {/* Left Section - Logo & Menu */}
       <div className="flex items-center gap-4">
         <img
+          onClick={toggleMenuFun}
           className="h-8 cursor-pointer"
           src="https://static.vecteezy.com/system/resources/previews/021/190/402/original/hamburger-menu-filled-icon-in-transparent-background-basic-app-and-web-ui-bold-line-icon-eps10-free-vector.jpg"
           alt="menu-icon"
