@@ -5,3 +5,5 @@ Notes:
           - Build sidenav bar with font-awsome and react-icons
           - Built buttons component brlow header
           - Built video container page which list all vidos
+          - Built watch page
+          - Built video details

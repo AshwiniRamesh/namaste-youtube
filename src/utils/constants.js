@@ -25,44 +25,44 @@ export const constants = {
     {
       heading: "",
       listItems: [
-        { name: "Home", icon: <FaHome /> },
-        { name: "Shorts", icon: <RiFireFill /> },
-        { name: "Subscriptions", icon: <MdSubscriptions /> },
+        { name: "Home", icon: <FaHome />, path: "/" },
+        { name: "Shorts", icon: <RiFireFill />, path: "/shorts" },
+        { name: "Subscriptions", icon: <MdSubscriptions />, path: "/subscriptions" },
       ],
     },
     {
       heading: "You",
       listItems: [
-        { name: "History", icon: <FaHistory /> },
-        { name: "Playlists", icon: <MdPlaylistPlay /> },
-        { name: "Your Videos", icon: <MdVideoLibrary /> },
-        { name: "Your Courses", icon: <RiLightbulbLine /> },
-        { name: "Watch Later", icon: <TbClock /> },
-        { name: "Liked Videos", icon: <BiLike /> },
+        { name: "History", icon: <FaHistory />, path: "/history" },
+        { name: "Playlists", icon: <MdPlaylistPlay />, path: "/playlists" },
+        { name: "Your Videos", icon: <MdVideoLibrary />, path: "/your-videos" },
+        { name: "Your Courses", icon: <RiLightbulbLine />, path: "/your-courses" },
+        { name: "Watch Later", icon: <TbClock />, path: "/watch-later" },
+        { name: "Liked Videos", icon: <BiLike />, path: "/liked-videos" },
       ],
     },
     {
       heading: "Explore",
       listItems: [
-        { name: "Trending", icon: <RiFireFill /> },
-        { name: "Shopping", icon: <FaShoppingBag /> },
-        { name: "Music", icon: <MdLibraryMusic /> },
-        { name: "Live", icon: <MdLiveTv /> },
-        { name: "Sports", icon: <MdOutlineSportsSoccer /> },
-        { name: "Gaming", icon: <FaGamepad /> },
-        { name: "Movies", icon: <BiMoviePlay /> },
-        { name: "Podcasts", icon: <FaPodcast /> },
-        { name: "News", icon: <IoNewspaper /> },
-        { name: "Fashion & Beauty", icon: <TbPlayerTrackNext /> },
+        { name: "Trending", icon: <RiFireFill />, path: "/trending" },
+        { name: "Shopping", icon: <FaShoppingBag />, path: "/shopping" },
+        { name: "Music", icon: <MdLibraryMusic />, path: "/music" },
+        { name: "Live", icon: <MdLiveTv />, path: "/live" },
+        { name: "Sports", icon: <MdOutlineSportsSoccer />, path: "/sports" },
+        { name: "Gaming", icon: <FaGamepad />, path: "/gaming" },
+        { name: "Movies", icon: <BiMoviePlay />, path: "/movies" },
+        { name: "Podcasts", icon: <FaPodcast />, path: "/podcasts" },
+        { name: "News", icon: <IoNewspaper />, path: "/news" },
+        { name: "Fashion & Beauty", icon: <TbPlayerTrackNext />, path: "/fashion-beauty" },
       ],
     },
     {
       heading: "More from YouTube",
       listItems: [
-        { name: "YouTube Premium", icon: <SiYoutubemusic /> },
-        { name: "YouTube Studio", icon: <SiYoutubestudio /> },
-        { name: "YouTube Music", icon: <SiYoutubemusic /> },
-        { name: "YouTube Kids", icon: <SiYoutubekids /> },
+        { name: "YouTube Premium", icon: <SiYoutubemusic />, path: "/youtube-premium" },
+        { name: "YouTube Studio", icon: <SiYoutubestudio />, path: "/youtube-studio" },
+        { name: "YouTube Music", icon: <SiYoutubemusic />, path: "/youtube-music" },
+        { name: "YouTube Kids", icon: <SiYoutubekids />, path: "/youtube-kids" },
       ],
     },
   ],
@@ -84,6 +84,7 @@ export const constants = {
   ],
   youtube:{
     url:'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=',
-    apiKey:'AIzaSyBkNFM1poWok00ZeGa2Sqb83hC8QAADFlE'
+    apiKey:'AIzaSyBkNFM1poWok00ZeGa2Sqb83hC8QAADFlE',
+    byIdUrl:'https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id='
   }
 };
