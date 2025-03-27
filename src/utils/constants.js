@@ -82,4 +82,8 @@ export const constants = {
     { name: "Comedy", value: "comedy" },
     { name: "Shorts", value: "shorts" },
   ],
+  youtube:{
+    url:'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=',
+    apiKey:'AIzaSyBkNFM1poWok00ZeGa2Sqb83hC8QAADFlE'
+  }
 };
