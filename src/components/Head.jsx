@@ -1,16 +1,17 @@
 import React from "react";
-import { FaMicrophone, FaBell, FaPlus } from "react-icons/fa"; // FontAwesome Icons
+import { FaMicrophone, FaBell, FaPlus } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../store/togglesSlice";
 
 export default function Head() {
-  const disppatch = useDispatch();
+  const dispatch = useDispatch();
 
   const toggleMenuFun = () => {
-    disppatch(toggleMenu());
+    dispatch(toggleMenu());
   };
+
   return (
-    <div className="grid grid-flow-col p-4  items-center">
+    <div className="fixed top-0 left-0 w-full bg-white shadow-md z-50 p-4 grid grid-flow-col items-center">
       {/* Left Section - Logo & Menu */}
       <div className="flex items-center gap-4">
         <img

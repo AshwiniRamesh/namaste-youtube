@@ -1,5 +1,19 @@
-import { FaHome, FaShoppingBag, FaHistory, FaGamepad, FaFilm, FaPodcast } from "react-icons/fa";
-import { MdSubscriptions, MdLibraryMusic, MdLiveTv, MdOutlineSportsSoccer, MdPlaylistPlay, MdVideoLibrary } from "react-icons/md";
+import {
+  FaHome,
+  FaShoppingBag,
+  FaHistory,
+  FaGamepad,
+  FaFilm,
+  FaPodcast,
+} from "react-icons/fa";
+import {
+  MdSubscriptions,
+  MdLibraryMusic,
+  MdLiveTv,
+  MdOutlineSportsSoccer,
+  MdPlaylistPlay,
+  MdVideoLibrary,
+} from "react-icons/md";
 import { BiLike, BiMoviePlay } from "react-icons/bi";
 import { IoNewspaper } from "react-icons/io5";
 import { TbPlayerTrackNext, TbClock } from "react-icons/tb";
@@ -51,5 +65,21 @@ export const constants = {
         { name: "YouTube Kids", icon: <SiYoutubekids /> },
       ],
     },
+  ],
+  buttonsList: [
+    { name: "All", value: "all" },
+    { name: "Music", value: "music" },
+    { name: "Sonu Nigam", value: "sonuNigam" },
+    { name: "Tamil Cinema", value: "tamilCinema" },
+    { name: "S. P. Balasubrahamanyam", value: "spb" },
+    { name: "K. S. Chitra", value: "ksChitra" },
+    { name: "Live", value: "live" },
+    { name: "Rajesha Krishnan", value: "rajeshaKrishnan" },
+    { name: "M. S. Subbalakshmi", value: "msSubbalakshmi" },
+    { name: "Mantras", value: "mantras" },
+    { name: "Bollywood Movies", value: "bollywoodMovies" },
+    { name: "Cooking", value: "cooking" },
+    { name: "Comedy", value: "comedy" },
+    { name: "Shorts", value: "shorts" },
   ],
 };
