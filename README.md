@@ -8,3 +8,4 @@ Notes:
           - Built watch page
           - Built video details
           - Implemented higher order function implementation
+          - Debouncing concept for search functionalities

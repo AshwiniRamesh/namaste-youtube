@@ -1,13 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaMicrophone, FaBell, FaPlus } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../store/togglesSlice";
+import {constants} from '../utils/constants'
 
 export default function Head() {
   const dispatch = useDispatch();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [videos, setVideos] = useState([]);
+  const baseUrl = constants.youtube.searchUrl;
+  const API_KEY = constants.youtube.apiKey
 
   const toggleMenuFun = () => {
     dispatch(toggleMenu());
+  };
+
+  // Debounced API call for search
+  useEffect(() => {
+    const fetchVideos = async () => {
+      if (!searchQuery) return;
+
+      try {
+        const response = await fetch(
+          `${baseUrl}${searchQuery}&type=video&maxResults=50&key=${API_KEY}`
+        );
+        const data = await response.json();
+        setVideos(data.items);
+        console.log({videos})
+      } catch (error) {
+        console.error("Error fetching YouTube videos:", error);
+      }
+    };
+
+    const timer = setTimeout(fetchVideos, 300); // Debounce for 300ms
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+
+  const searchVideos = (e) => {
+    setSearchQuery(e.target.value);
   };
 
   return (
@@ -34,12 +64,13 @@ export default function Head() {
             type="text"
             placeholder="Search"
             className="px-4 py-2 w-96 outline-none"
+            value={searchQuery}
+            onChange={searchVideos} // Fixed event handler
           />
           <button className="bg-gray-100 px-4 py-2 border-l border-gray-300 hover:bg-gray-200">
             🔍
           </button>
         </div>
-        {/* 🎙️ YouTube-style Voice Search Icon */}
         <button className="bg-gray-100 p-2 rounded-full hover:bg-gray-200">
           <FaMicrophone className="h-5 w-5 text-gray-700" />
         </button>
