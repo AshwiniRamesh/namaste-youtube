@@ -7,3 +7,4 @@ Notes:
           - Built video container page which list all vidos
           - Built watch page
           - Built video details
+          - Implemented higher order function implementation

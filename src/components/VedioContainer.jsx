@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getPopularVideos } from "../utils/videos";
-import VideoCard from "./VideoCard";
+import VideoCard, { withBorderHigherOrderComponent } from "./VideoCard";
 
 const VedioContainer = () => {
   const [videos, setVideos] = useState([]);
@@ -18,7 +18,14 @@ const VedioContainer = () => {
     fetchVideos();
   }, []);
 
-  return <VideoCard videos={videos} />;
+  // Wrap VideoCard with withBorder HOC
+  const VideoCardWithBorder = withBorderHigherOrderComponent(VideoCard);
+
+  return (
+    <div>
+      <VideoCardWithBorder videos={videos} />
+    </div>
+  );
 };
 
 export default VedioContainer;
