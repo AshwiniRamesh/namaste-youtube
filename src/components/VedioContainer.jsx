@@ -9,7 +9,7 @@ const VedioContainer = () => {
     const fetchVideos = async () => {
       try {
         const popularVideos = await getPopularVideos();
-        setVideos(popularVideos);
+        setVideos(popularVideos || []);
       } catch (error) {
         console.error("Error fetching videos:", error);
       }

@@ -9,3 +9,5 @@ Notes:
           - Built video details
           - Implemented higher order function implementation
           - Debouncing concept for search functionalities
+          - Show search results in UI
+          - Implemented caching with redux store (check in store before calling api)

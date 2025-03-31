@@ -2,7 +2,7 @@ import React from "react";
 
 const Shimmer = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-10 mt-6"> {/* Added mt-8 for top margin */}
       {Array(8)
         .fill("")
         .map((_, index) => (

@@ -1,25 +1,21 @@
-import React from "react";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import store from "./store/appStore";
-import Head from "./components/Head";
 import Body from "./components/Body";
 import WatchPage from "./components/WatchPage";
 import MainContainer from "./components/MainContainer";
+import SearchResults from "./components/searchResults";
+import ErrorBoundary from "./components/ErrorBoundary"; 
 
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <Body />, // Parent Layout Component
+    element: <Body />,
+    errorElement: <ErrorBoundary />,
     children: [
-      {
-        path: "/",
-        element: <MainContainer />,
-      },
-      {
-        path: "/watch",
-        element: <WatchPage />,
-      },
+      { path: "/", element: <MainContainer /> },
+      { path: "/watch", element: <WatchPage /> },
+      { path: "/search", element: <SearchResults /> }, // Add search page
     ],
   },
 ]);
@@ -27,10 +23,8 @@ const appRouter = createBrowserRouter([
 function App() {
   return (
     <Provider store={store}>
-      <div>
-        <Head />
-        <RouterProvider router={appRouter} />
-      </div>
+      <RouterProvider router={appRouter}>
+      </RouterProvider>
     </Provider>
   );
 }
