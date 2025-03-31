@@ -1,3 +1,4 @@
+import { FaMicrophone, FaBell, FaPlus } from "react-icons/fa";
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../store/togglesSlice";
@@ -73,9 +74,24 @@ export default function Head() {
             onChange={(e) => setQuery(e.target.value)}
           />
           <button className="bg-gray-100 px-4 py-2 border-l border-gray-300 hover:bg-gray-200">
-            🔍
+          <FaMicrophone className="h-5 w-5 text-gray-700" />
           </button>
         </div>
+      </div>
+      {/* Right Section - +Create, Notifications, User Icon */}
+      <div className="flex justify-end items-center gap-4">
+        <button className="bg-gray-100 px-4 py-2 rounded-md hover:bg-gray-200 flex items-center gap-2">
+          <FaPlus className="h-4 w-4" />
+          Create
+        </button>
+        <button className="bg-gray-100 p-2 rounded-full hover:bg-gray-200">
+          <FaBell className="h-5 w-5 text-gray-700" />
+        </button>
+        <img
+          className="h-10 w-10 rounded-full cursor-pointer"
+          src="https://static.vecteezy.com/system/resources/previews/000/550/731/original/user-icon-vector.jpg"
+          alt="user-icon"
+        />
       </div>
     </div>
   );

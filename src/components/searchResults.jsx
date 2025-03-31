@@ -14,7 +14,7 @@ export default function SearchResults() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {videos.map((video) => (
-            <Link to={`/watch?v=${video.id}`} key={video.etag || video.id}>
+            <Link to={`/watch?v=${video.id.videoId}`} key={video.id.videoId}>
               <div className="bg-gray-100 p-2 rounded-lg shadow-md cursor-pointer hover:bg-gray-200 transition">
                 <img
                   src={video?.snippet?.thumbnails?.medium?.url}
