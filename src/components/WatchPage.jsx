@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { constants } from "../utils/constants";
 import VideoDeatils from "./VideoDeatils";
+import CommentsContainer from './CommentsContainer'
 
 export default function WatchPage() {
   const [searchParams] = useSearchParams();
@@ -21,6 +22,7 @@ export default function WatchPage() {
       const data = await response.json();
       if (data.items.length > 0) {
         setVideoDetails(data.items[0]);
+        console.log(data.items)
       }
     } catch (error) {
       console.error("Error fetching video details:", error);
@@ -32,7 +34,7 @@ export default function WatchPage() {
   }
 
   return (
-    <div>
+    <div className="p-2 m-2">
       <div className="min-h-screen bg-black text-white flex flex-col items-center">
         {/* Video Player */}
         <div className="w-full max-w-[900px]">
@@ -48,6 +50,7 @@ export default function WatchPage() {
 
       {/* Video Details */}
       {videoDetails && <VideoDeatils videoDetails={videoDetails} />}
+      <CommentsContainer videoId={videoId}></CommentsContainer>
     </div>
   );
 }
