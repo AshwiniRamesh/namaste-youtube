@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { constants } from "../utils/constants";
 import VideoDeatils from "./VideoDeatils";
-import CommentsContainer from './CommentsContainer'
+import CommentsContainer from './CommentsContainer';
+import LiveChatContainer from './LiveChatContainer';
 
 export default function WatchPage() {
   const [searchParams] = useSearchParams();
@@ -35,7 +36,7 @@ export default function WatchPage() {
 
   return (
     <div className="p-2 m-2">
-      <div className="min-h-screen bg-black text-white flex flex-col items-center">
+     <div className="flex">
         {/* Video Player */}
         <div className="w-full max-w-[900px]">
           <iframe
@@ -46,7 +47,10 @@ export default function WatchPage() {
             allowFullScreen
           ></iframe>
         </div>
+      <div>
+        <LiveChatContainer videoId={videoId}/>
       </div>
+     </div>
 
       {/* Video Details */}
       {videoDetails && <VideoDeatils videoDetails={videoDetails} />}

@@ -12,3 +12,4 @@ Notes:
           - Show search results in UI
           - Implemented caching with redux store (check in store before calling api)
           - Built comments section
+          - Implemented fetching chat messages using API Pooling

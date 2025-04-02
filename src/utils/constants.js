@@ -86,6 +86,8 @@ export const constants = {
     url:'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&key=',
     apiKey:'AIzaSyB-3ItsfzMTbYBmOqg9i4NO3aNDxDRZBc4',
     byIdUrl:'https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=',
-    searchUrl:'https://www.googleapis.com/youtube/v3/search?part=snippet&q='
+    searchUrl:'https://www.googleapis.com/youtube/v3/search?part=snippet&q=',
+    liveChatId:'https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id=',
+    chatDetails:'https://www.googleapis.com/youtube/v3/liveChat/messages?liveChatId='
   }
 };
