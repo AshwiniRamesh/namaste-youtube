@@ -13,3 +13,4 @@ Notes:
           - Implemented caching with redux store (check in store before calling api)
           - Built comments section
           - Implemented fetching chat messages using API Pooling
+          - Implemented scrolling in chat page and dsiplay only lastest 30 messages

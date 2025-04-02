@@ -23,7 +23,6 @@ export default function WatchPage() {
       const data = await response.json();
       if (data.items.length > 0) {
         setVideoDetails(data.items[0]);
-        console.log(data.items)
       }
     } catch (error) {
       console.error("Error fetching video details:", error);
@@ -36,25 +35,27 @@ export default function WatchPage() {
 
   return (
     <div className="p-2 m-2">
-     <div className="flex">
-        {/* Video Player */}
-        <div className="w-full max-w-[900px]">
+      <div className="flex gap-4">
+        {/* Fixed size video player */}
+        <div className="w-[900px] h-[500px]">
           <iframe
-            className="w-full aspect-video rounded-lg shadow-lg"
+            className="w-full h-full rounded-lg shadow-lg"
             src={`https://www.youtube.com/embed/${videoId}`}
             title="YouTube Video Player"
             frameBorder="0"
             allowFullScreen
           ></iframe>
         </div>
-      <div>
-        <LiveChatContainer videoId={videoId}/>
-      </div>
-     </div>
 
-      {/* Video Details */}
+        {/* Fixed size Live Chat */}
+        <div className="w-[400px] h-[500px]">
+          <LiveChatContainer videoId={videoId} />
+        </div>
+      </div>
+
+      {/* Video Details & Comments */}
       {videoDetails && <VideoDeatils videoDetails={videoDetails} />}
-      <CommentsContainer videoId={videoId}></CommentsContainer>
+      <CommentsContainer videoId={videoId} />
     </div>
   );
 }
