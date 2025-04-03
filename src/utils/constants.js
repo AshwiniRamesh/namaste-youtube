@@ -5,6 +5,7 @@ import {
   FaGamepad,
   FaFilm,
   FaPodcast,
+  FaRegStickyNote
 } from "react-icons/fa";
 import {
   MdSubscriptions,
@@ -26,13 +27,14 @@ export const constants = {
       heading: "",
       listItems: [
         { name: "Home", icon: <FaHome />, path: "/" },
-        { name: "Shorts", icon: <RiFireFill />, path: "/shorts" },
-        { name: "Subscriptions", icon: <MdSubscriptions />, path: "/subscriptions" },
+        { name: "Memo Hook", icon: <FaRegStickyNote />, path: "/memoHook" },
       ],
     },
     {
       heading: "You",
       listItems: [
+        { name: "Shorts", icon: <RiFireFill />, path: "/shorts" },
+        { name: "Subscriptions", icon: <MdSubscriptions />, path: "/subscriptions" },
         { name: "History", icon: <FaHistory />, path: "/history" },
         { name: "Playlists", icon: <MdPlaylistPlay />, path: "/playlists" },
         { name: "Your Videos", icon: <MdVideoLibrary />, path: "/your-videos" },
