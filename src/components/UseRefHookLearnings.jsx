@@ -12,7 +12,7 @@ export default function UseRefHookLearnings() {
       console.log("Random value ", Math.random());
     }, 1000);
   }, []);
-  console.log('')
+  console.log('test')
 
   return (
     <>
