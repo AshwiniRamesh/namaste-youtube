@@ -28,6 +28,7 @@ export const constants = {
       listItems: [
         { name: "Home", icon: <FaHome />, path: "/" },
         { name: "Memo Hook", icon: <FaRegStickyNote />, path: "/memoHook" },
+        { name: "UseRef Hook", icon: <FaRegStickyNote />, path: "/useRefHook" },
       ],
     },
     {

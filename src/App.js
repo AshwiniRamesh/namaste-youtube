@@ -6,6 +6,7 @@ import WatchPage from "./components/WatchPage";
 import MainContainer from "./components/MainContainer";
 import SearchResults from "./components/searchResults";
 import MemoHookLearnings from "./components/MemoHookLearnings";
+import UseRefHookLearnings from "./components/UseRefHookLearnings";
 import ErrorBoundary from "./components/ErrorBoundary"; 
 
 const appRouter = createBrowserRouter([
@@ -18,6 +19,7 @@ const appRouter = createBrowserRouter([
       { path: "/watch", element: <WatchPage /> },
       { path: "/search", element: <SearchResults /> }, // Add search page
       { path: "/memoHook", element: <MemoHookLearnings /> },//useMemo() hook learnings
+      { path: "/useRefHook", element: <UseRefHookLearnings /> },//useRef() hook learnings
     ],
   },
 ]);
